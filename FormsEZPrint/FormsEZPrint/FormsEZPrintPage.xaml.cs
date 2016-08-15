@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace FormsEZPrint
 {
@@ -7,6 +8,13 @@ namespace FormsEZPrint
 		public FormsEZPrintPage()
 		{
 			InitializeComponent();
+		}
+
+		protected void Handle_Print(object sender, EventArgs e)
+		{
+			var printSvc = DependencyService.Get<IPrintService>();
+
+			printSvc.Print(printWeb);
 		}
 	}
 }

@@ -1,4 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:FormsEZPrint" x:Class="FormsEZPrint.FormsEZPrintPage">
-	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+	<WebView Source="https://xamarin.com" x:Name="printWeb" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Priority="0" Text="Print" Clicked="Handle_Print" />
+	</ContentPage.ToolbarItems>
 </ContentPage>
