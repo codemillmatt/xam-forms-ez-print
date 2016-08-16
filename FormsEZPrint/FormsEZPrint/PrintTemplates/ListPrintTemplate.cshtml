@@ -1,0 +1,35 @@
+﻿@using FormsEZPrint;
+@using System.Collections.Generic;
+
+@model List<EZPrintModel>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- iOS - needs to reside in the "Resources" directory and have build action of "BundleResource" -->
+		<!-- Droid - needs to reside in "Assets" directory and have build action of "AndroidAsset" -->
+		<link rel="stylesheet" href="primer.css">
+	</head>
+	<body>
+		<div class="blankslate blankslate-spacious">
+			<h3>Xamarin Forms EZ-Print!</h3>
+			<p>Even works using the CSS frameworks like Primer!</p>
+		</div>
+		<div class="container">
+			<div class="columns">
+				@foreach (var m in Model) {
+					<div class="one-fifth column">
+						<span class="d-inline-block p-3 bg-red text-white">
+						@m.ModelName
+						</span>
+					</div>
+					<div class="four-fifths column">
+						<span class="d-inline-block p-3 bg-green">
+						@m.ModelDescription
+						</span>
+					</div>
+				}
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="FormsEZPrint.EZPrintListPage"
+		Title="{Binding Title}">
+	<ContentPage.Content>
+		<ListView x:Name="theList" ItemsSource="{Binding ezPrints}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding ModelName}" Detail="{Binding ModelDescription}" />
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Print" Clicked="PrintList" />
+	</ContentPage.ToolbarItems>
+</ContentPage>

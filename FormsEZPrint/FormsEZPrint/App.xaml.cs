@@ -8,7 +8,8 @@ namespace FormsEZPrint
 		{
 			InitializeComponent();
 
-			MainPage = new FormsEZPrintPage();
+			//MainPage = new NavigationPage(new FormsEZPrintPage());
+			MainPage = new NavigationPage(new EZPrintListPage());
 		}
 
 		protected override void OnStart()
