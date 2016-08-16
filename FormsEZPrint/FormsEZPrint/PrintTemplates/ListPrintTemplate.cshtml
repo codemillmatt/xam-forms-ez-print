@@ -1,0 +1,15 @@
+﻿@using FormsEZPrint;
+@using System.Collections.Generic;
+
+@model List<EZPrintModel>
+
+<html>
+	<body>
+
+		@foreach (var m in Model) {
+			@m.ModelName
+			<hr>
+		}
+
+	</body>
+</html>

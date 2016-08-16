@@ -13,4 +13,7 @@
 			</ListView.ItemTemplate>
 		</ListView>
 	</ContentPage.Content>
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Print" Clicked="PrintList" />
+	</ContentPage.ToolbarItems>
 </ContentPage>
