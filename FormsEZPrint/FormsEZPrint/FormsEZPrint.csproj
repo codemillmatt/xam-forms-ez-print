@@ -54,6 +54,9 @@
     <Compile Include="EZPrintDetailPage.xaml.cs">
       <DependentUpon>EZPrintDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\EZPrintModel.cs" />
+    <Compile Include="ViewModels\EZPrintListViewModel.cs" />
+    <Compile Include="ViewModels\EZPrintDetailViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
