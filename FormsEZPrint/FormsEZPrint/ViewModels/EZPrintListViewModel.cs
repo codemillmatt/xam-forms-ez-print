@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 
@@ -10,25 +8,13 @@ namespace FormsEZPrint
 	{
 		public ObservableCollection<EZPrintModel> ezPrints { get; set; } = new ObservableCollection<EZPrintModel>();
 		public string Title { get; set; } = "Forms E-Z Print";
-		INavigation formsNav;
 
-		public EZPrintListViewModel(INavigation nav)
+		public EZPrintListViewModel()
 		{
 			// Populate with some dummy data
 			ezPrints.Add(new EZPrintModel() { ModelDescription = "Description 1", ModelName = "Name 1" });
 			ezPrints.Add(new EZPrintModel() { ModelDescription = "Description 2", ModelName = "Name 2" });
 			ezPrints.Add(new EZPrintModel() { ModelDescription = "Description 3", ModelName = "Name 3" });
-
-			// Setting navigation - dependent on the xamarin forms view based nav
-			formsNav = nav;
-		}
-
-		public async Task ShowEZDetails(EZPrintModel model)
-		{
-			var detailVM = new EZPrintDetailViewModel(model);
-			var detailView = new EZPrintDetailPage() { ViewModel = detailVM };
-
-			await formsNav.PushAsync(detailView);
 		}
 	}
 }

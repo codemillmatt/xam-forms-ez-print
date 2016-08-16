@@ -45,45 +45,96 @@ public override void Execute()
 {
 WriteLiteral("\n");
 
-WriteLiteral("<html>\n\t<body>\n\n");
+WriteLiteral("<!DOCTYPE html>\n<html");
+
+WriteLiteral(" lang=\"en\"");
+
+WriteLiteral(">\n\t<head>\n\t\t<!-- iOS - needs to reside in the \"Resources\" directory and have buil" +
+"d action of \"BundleResource\" -->\n\t\t<!-- Droid - needs to reside in \"Assets\" dire" +
+"ctory and have build action of \"AndroidAsset\" -->\n\t\t<link");
+
+WriteLiteral(" rel=\"stylesheet\"");
+
+WriteLiteral(" href=\"primer.css\"");
+
+WriteLiteral(">\n\t</head>\n\t<body>\n\t\t<div");
+
+WriteLiteral(" class=\"blankslate blankslate-spacious\"");
+
+WriteLiteral(">\n\t\t\t<h3>Xamarin Forms EZ-Print!</h3>\n\t\t\t<p>Even works using the CSS frameworks l" +
+"ike Primer!</p>\n\t\t</div>\n\t\t<div");
+
+WriteLiteral(" class=\"container\"");
+
+WriteLiteral(">\n\t\t\t<div");
+
+WriteLiteral(" class=\"columns\"");
+
+WriteLiteral(">\n");
 
 
-#line 9 "ListPrintTemplate.cshtml"
-		
-
-#line default
-#line hidden
-
-#line 9 "ListPrintTemplate.cshtml"
-         foreach (var m in Model) {
-			
-
-#line default
-#line hidden
-
-#line 10 "ListPrintTemplate.cshtml"
-       Write(m.ModelName);
-
-
-#line default
-#line hidden
-
-#line 10 "ListPrintTemplate.cshtml"
-                        
-
-
-#line default
-#line hidden
-WriteLiteral("\t\t\t<hr>\n");
-
-
-#line 12 "ListPrintTemplate.cshtml"
-		}
-
+#line 20 "ListPrintTemplate.cshtml"
+				
 
 #line default
 #line hidden
-WriteLiteral("\n\t</body>\n</html>");
+
+#line 20 "ListPrintTemplate.cshtml"
+                 foreach (var m in Model) {
+
+
+#line default
+#line hidden
+WriteLiteral("\t\t\t\t\t<div");
+
+WriteLiteral(" class=\"one-fifth column\"");
+
+WriteLiteral(">\n\t\t\t\t\t\t<span");
+
+WriteLiteral(" class=\"d-inline-block p-3 bg-red text-white\"");
+
+WriteLiteral(">\n");
+
+WriteLiteral("\t\t\t\t\t\t");
+
+
+#line 23 "ListPrintTemplate.cshtml"
+                   Write(m.ModelName);
+
+
+#line default
+#line hidden
+WriteLiteral("\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n");
+
+WriteLiteral("\t\t\t\t\t<div");
+
+WriteLiteral(" class=\"four-fifths column\"");
+
+WriteLiteral(">\n\t\t\t\t\t\t<span");
+
+WriteLiteral(" class=\"d-inline-block p-3 bg-green\"");
+
+WriteLiteral(">\n");
+
+WriteLiteral("\t\t\t\t\t\t");
+
+
+#line 28 "ListPrintTemplate.cshtml"
+                   Write(m.ModelDescription);
+
+
+#line default
+#line hidden
+WriteLiteral("\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n");
+
+
+#line 31 "ListPrintTemplate.cshtml"
+				}
+
+
+#line default
+#line hidden
+WriteLiteral("\t\t\t</div>\n\t\t</div>\n\t</body>\n</html>");
 
 }
 }

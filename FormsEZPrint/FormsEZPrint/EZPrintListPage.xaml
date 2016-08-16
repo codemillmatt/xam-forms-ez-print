@@ -5,7 +5,7 @@
 		x:Class="FormsEZPrint.EZPrintListPage"
 		Title="{Binding Title}">
 	<ContentPage.Content>
-		<ListView x:Name="theList" ItemsSource="{Binding ezPrints}" ItemSelected="EZListSelectedEvent">
+		<ListView x:Name="theList" ItemsSource="{Binding ezPrints}">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<TextCell Text="{Binding ModelName}" Detail="{Binding ModelDescription}" />
