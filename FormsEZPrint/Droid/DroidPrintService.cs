@@ -2,7 +2,6 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Android.Print;
-using Plugin.CurrentActivity;
 using Android.Content;
 using FormsEZPrint.Droid;
 
@@ -27,7 +26,7 @@ namespace FormsEZPrint.Droid
 				if (version >= Android.OS.BuildVersionCodes.Kitkat)
 				{
 					var printMgr = (PrintManager)Forms.Context.GetSystemService(Context.PrintService);
-					//var printMgr = (PrintManager)CrossCurrentActivity.Current.Activity.GetSystemService(Context.PrintService);
+
 					printMgr.Print("Forms-EZ-Print", droidViewToPrint.CreatePrintDocumentAdapter(), null);
 				}
 			}
